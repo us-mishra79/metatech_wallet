@@ -9,10 +9,10 @@ const DEFAULT_GAS_LIMIT = '0x2dc6c0';
 // ZERO_AMOUNT represents zero amount transferred on some calls.
 const ZERO_AMOUNT = '0x0';
 
-// PHOTON_CHAIN_ID is the chain id used by TechPay Photon blockchain.
+// PHOTON_CHAIN_ID is the chain id used by Meta Tech Photon blockchain.
 const PHOTON_CHAIN_ID = '0xa09';
 
-// TESTNET_CHAIN_ID is the chain id used by TechPay Photon test net.
+// TESTNET_CHAIN_ID is the chain id used by Meta Tech Photon test net.
 const TESTNET_CHAIN_ID = '0x9af';
 
 /**

@@ -1,7 +1,7 @@
 <template>
     <div class="ledger-account-picker">
         <div v-if="showLedgerConnectMessage" class="ledger-connect-message">
-            Please connect your ledger device and select TechPay MTC app.
+            Please connect your ledger device and select Meta Tech MTC app.
             <div v-if="showTryAgainButton" class="button-footer">
                 <button class="btn large" @click="onTryAgainBtnClick">Try again</button>
             </div>

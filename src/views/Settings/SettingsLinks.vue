@@ -4,7 +4,7 @@
             <div class="small-container">
                 <p>
                     <a href="https://explorer.techpay.io/" rel="noopener" target="_blank">
-                        TechPay Explorer
+                        Meta Tech Explorer
                     </a>
                 </p>
 

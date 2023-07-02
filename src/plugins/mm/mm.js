@@ -10,9 +10,9 @@ const PHOTON_CHAIN_ID = appConfig.chainId;
 /** @type {MMChain} */
 export const PHOTON_MAINNET = {
     chainId: appConfig.mainnet.chainId,
-    chainName: 'TechPay Photon Mainnet',
+    chainName: 'Meta Tech Photon Mainnet',
     nativeCurrency: {
-        name: 'TechPay',
+        name: 'Meta Tech',
         symbol: 'MTC',
         decimals: 18,
     },
@@ -23,9 +23,9 @@ export const PHOTON_MAINNET = {
 /** @type {MMChain} */
 export const PHOTON_TESTNET = {
     chainId: appConfig.testnet.chainId,
-    chainName: 'TechPay Testnet',
+    chainName: 'Meta Tech Testnet',
     nativeCurrency: {
-        name: 'TechPay',
+        name: 'Meta Tech',
         symbol: 'MTC',
         decimals: 18,
     },

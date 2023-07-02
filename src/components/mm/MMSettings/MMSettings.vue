@@ -11,7 +11,7 @@
                             :disabled="addTechPayMainnetInProgress"
                             @click="onAddChainClick('mainnet')"
                         >
-                            Add TechPay Photon Mainnet
+                            Add Meta Tech Photon Mainnet
                             <pulse-loader v-if="addTechPayMainnetInProgress" color="#fff"></pulse-loader>
                         </button>
                         <button
@@ -20,7 +20,7 @@
                             :disabled="addTechPayTestnetInProgress"
                             @click="onAddChainClick('testnet')"
                         >
-                            Add TechPay Testnet
+                            Add Meta Tech Testnet
                             <pulse-loader v-if="addTechPayTestnetInProgress" color="#1969ff"></pulse-loader>
                         </button>
                     </div>

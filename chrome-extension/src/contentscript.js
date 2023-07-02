@@ -18,7 +18,7 @@ function injectScriptFile(url) {
         container.insertBefore(scriptTag, container.children[0]);
         container.removeChild(scriptTag);
     } catch (e) {
-        console.error('TechPay-PWA-Wallet inpage injection failed.', e);
+        console.error('Meta Tech-PWA-Wallet inpage injection failed.', e);
     }
 }
 

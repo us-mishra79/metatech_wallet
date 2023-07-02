@@ -90,7 +90,7 @@
         >
             <div class="align-center">
                 <div v-if="!$walletConnect.isCorrectChainId()">
-                    Please, select TechPay Photon chain.
+                    Please, select Meta Tech Photon chain.
                 </div>
                 <div v-else-if="walletConnectAccount.toLowerCase() !== currentAccount.address.toLowerCase()">
                     Please, select account <b>{{ currentAccount.address }}</b>

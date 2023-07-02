@@ -6,7 +6,7 @@
                     <social-media-links></social-media-links>
                 </div>
                 <div class="col align-center-sm align-end">
-                    <a href="https://techpay.io/" class="f-footer-text" target="_blank" rel="noopener">©2020 TechPay</a>
+                    <a href="https://techpay.io/" class="f-footer-text" target="_blank" rel="noopener">©2020 Meta Tech</a>
                 </div>
             </div>
         </div>

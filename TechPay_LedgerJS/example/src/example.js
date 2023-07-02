@@ -11,11 +11,11 @@ import {buffer2Hex} from "../../lib/utils";
  */
 async function showVersion(bridge) {
     // inform
-    console.log("\nRequesting TechPay Nano Ledger app version.");
+    console.log("\nRequesting Meta Tech Nano Ledger app version.");
 
     // get the version info
     const ver = await bridge.getVersion();
-    console.log(`    > TechPay Nano app version is: ${ver.major}.${ver.minor}.${ver.patch}`);
+    console.log(`    > Meta Tech Nano app version is: ${ver.major}.${ver.minor}.${ver.patch}`);
 
     // devel version?
     if (ver.flags.isDevelopment) {
@@ -108,7 +108,7 @@ async function getSignedTransaction(bridge) {
 async function run() {
     // inform
     console.log("-----------------------------------------------");
-    console.log("TechPay Nano Ledger application example started.");
+    console.log("Meta Tech Nano Ledger application example started.");
     console.log("-----------------------------------------------");
     console.log("\n    > We try to connect to your Ledger device.");
 

@@ -8,7 +8,7 @@ const SFC_CONTRACT_ADDRESS = '0xfc00face00000000000000000000000000000000';
 // ZERO_AMOUNT represents zero amount transferred on some calls.
 const ZERO_AMOUNT = '0x0';
 
-// PHOTON_CHAIN_ID is the chain id used by TechPay Photon blockchain.
+// PHOTON_CHAIN_ID is the chain id used by Meta Tech Photon blockchain.
 const PHOTON_CHAIN_ID = '0xa09';
 
 /**

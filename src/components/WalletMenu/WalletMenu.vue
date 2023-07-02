@@ -23,7 +23,7 @@
             <div class="footer">
                 <social-media-links />
                 <div class="copyright">
-                    <a href="https://techpay.io/" target="_blank" rel="noopener">©2020 TechPay</a>
+                    <a href="https://techpay.io/" target="_blank" rel="noopener">©2020 Meta Tech</a>
                 </div>
             </div>
         </div>

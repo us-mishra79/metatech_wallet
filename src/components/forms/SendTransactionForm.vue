@@ -313,7 +313,7 @@ export default {
                     } else {
                         try {
                             const data = await this.$bnb.getBNBBalances(value);
-                            this.ETHOrBNBAccountBalance = `Current TechPay Balance: ${data.balance} MTC`;
+                            this.ETHOrBNBAccountBalance = `Current Meta Tech Balance: ${data.balance} MTC`;
                         } catch (_error) {
                             validAddress = false;
 
@@ -332,7 +332,7 @@ export default {
                 if (validAddress) {
                     try {
                         const balance = await this.$bnb.getETHBalance(value);
-                        this.ETHOrBNBAccountBalance = `Current TechPay Balance: ${balance} MTC`;
+                        this.ETHOrBNBAccountBalance = `Current Meta Tech Balance: ${balance} MTC`;
                     } catch (_error) {
                         validAddress = false;
 

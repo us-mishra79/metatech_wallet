@@ -44,7 +44,7 @@
                         <b>Chrome</b>
                     </li>
                     <li><b>Step 2:</b> Go to <b>Settings</b> (Three dots in the top right corner)</li>
-                    <li><b>Step 3:</b> Click <b>“Install TechPay PWA Wallet”</b></li>
+                    <li><b>Step 3:</b> Click <b>“Install Meta Tech PWA Wallet”</b></li>
                 </ul>
             </div>
         </f-window>

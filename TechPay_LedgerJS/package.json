@@ -1,17 +1,17 @@
 {
   "name": "techpay-ledgerjs",
-  "description": "TechPay Ledger Hardware Wallet High Level API",
+  "description": "Meta Tech Ledger Hardware Wallet High Level API",
   "version": "1.0.4",
   "files": [
     "lib"
   ],
   "main": "techpay-nano.js",
-  "repository": "github:TechPay-io/TechPay_LedgerJS",
-  "homepage": "https://github.com/TechPay-io/TechPay_LedgerJS",
+  "repository": "github:Meta Tech-io/TechPay_LedgerJS",
+  "homepage": "https://github.com/Meta Tech-io/TechPay_LedgerJS",
   "keywords": [
     "Ledger",
     "LedgerWallet",
-    "TechPay",
+    "Meta Tech",
     "MTC",
     "NanoS",
     "Wallet"

@@ -1,25 +1,25 @@
-# TechPay Client JS Utils
+# Meta Tech Client JS Utils
 The code implements JS library for simplified work with specific tools and interfaces
-of the TechPay Photon blockchain client ecosystem. There are several modules available 
+of the Meta Tech Photon blockchain client ecosystem. There are several modules available 
 in the library and they cover following client workflows: 
 
-- **Communication with the TechPay Ledger Nano S app.** 
+- **Communication with the Meta Tech Ledger Nano S app.** 
     
-    The library is compatible with the [TechPay Ledger  Nano S Application](https://github.com/TechPay-io/techpay-ledger).
+    The library is compatible with the [Meta Tech Ledger  Nano S Application](https://github.com/Meta Tech-io/techpay-ledger).
     Please follow instructions on the linked repository to deploy your copy
-    of the TechPay Ledger HW wallet application.
+    of the Meta Tech Ledger HW wallet application.
     
 - **Staking and rewards related SFC commands.** 
 
     The library contains a module for building transactions
-    used to invoke a subset of TechPay Photon SFC contract operations. The calls covered 
+    used to invoke a subset of Meta Tech Photon SFC contract operations. The calls covered 
     by the library allow you to create and manage native tokens delegation 
     and delegation rewards.
     
 - **DeFi smart contract calls.** 
 
     The library contains a module for building transactions
-    used to invoke TechPay DeFi smart contract commands and manage your ERC20 tokens.     
+    used to invoke Meta Tech DeFi smart contract commands and manage your ERC20 tokens.     
 
 # How to use generated transactions
 Most functions in the library allow you to build base transactions for certain smart contract
@@ -34,17 +34,17 @@ for signing transactions and sending them to the block chain. You will need and 
 endpoint address of an Photon node, either local or remote, to be able to proceed.      
 
 # How to use the Ledger module
-Please note you absolutely have to use HTTPS for TechPay Ledger Application
+Please note you absolutely have to use HTTPS for Meta Tech Ledger Application
 communication using this library. It utilizes U2F protocol to exchange
 data between your browser and the Ledger hardware token and the U2F protocol
 is available only if the origin of the web page uses secured channel.
 
-You need to have the TechPay Ledger application installed on your Ledger
+You need to have the Meta Tech Ledger application installed on your Ledger
 token to have the other side to communicate with. If you don't, Please
 follow the Ledger manual and install your application. If not available,
 you can deploy it directly from our GitHub repository.
 
-[TechPay Ledger Nano S Application repository](https://github.com/TechPay-io/techpay-ledger)
+[Meta Tech Ledger Nano S Application repository](https://github.com/Meta Tech-io/techpay-ledger)
 
 In this case you app will not have the correct signature and so the
 Ledger device will always ask you for a permission before opening the app.

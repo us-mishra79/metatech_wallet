@@ -1,8 +1,8 @@
 /**
- * This Implements TechPay Nano Ledger HW Wallet API
+ * This Implements Meta Tech Nano Ledger HW Wallet API
  *
  * @author Jiri Malek <jirka.malek@gmail.com>
- * @copyright (c) 2020, TechPay
+ * @copyright (c) 2020, Meta Tech
  * @version 0.1.7
  * @licese MIT
  */
@@ -12,13 +12,13 @@ import Common from "ethereumjs-common";
 import {encode} from "rlp";
 import {toBuffer, stripZeros} from "ethereumjs-util";
 
-// TECHPAY_CHAIN_ID represents the TechPay Photon main chain id.
+// TECHPAY_CHAIN_ID represents the Meta Tech Photon main chain id.
 export const TECHPAY_CHAIN_ID = 0xa09;
 
-// CLA specified service class used by TechPay Ledger application
+// CLA specified service class used by Meta Tech Ledger application
 const CLA = 0xe0;
 
-// INS specifies instructions supported by the TechPay Ledger app
+// INS specifies instructions supported by the Meta Tech Ledger app
 const INS = {
     GET_VERSION: 0x01,
     GET_PUBLIC_KEY: 0x10,
@@ -37,7 +37,7 @@ const SIGN_STATE = {
 // to the device in one chunk
 const MAX_APDU_CHUNK_LENGTH = 150;
 
-// ErrorCodes exports list of errors produced by the TechPay Ledger app
+// ErrorCodes exports list of errors produced by the Meta Tech Ledger app
 // in case of unexpected event.
 export const ErrorCodes = {
     // Bad request header.
@@ -136,7 +136,7 @@ const wrapConvertError = fn => async (...args) => {
 };
 
 
-// TechPayNano implements high level TechPay Nano Ledger HW wallet communication
+// TechPayNano implements high level Meta Tech Nano Ledger HW wallet communication
 export default class TechPayNano {
     // transport represents Ledger hw-transport layer
     // used to exchange APDU stream with the Ledger device
@@ -174,7 +174,7 @@ export default class TechPayNano {
         // if another function is being resolved so we don't get into a race conditions.
         // Some functions require user interaction with the device and another instruction
         // can not be executed until the active one finished. If we send another APDU
-        // in the mean time, the TechPay app will restart the Ledger device to protect
+        // in the mean time, the Meta Tech app will restart the Ledger device to protect
         // it against malicious attempts to abuse possible weaknesses of the internal
         // state switch.
         this.transport.decorateAppAPIMethods(this, this.methods, ledgerAppKey);
@@ -185,7 +185,7 @@ export default class TechPayNano {
     }
 
     /**
-     * getVersion obtains TechPay Nano Ledger application version
+     * getVersion obtains Meta Tech Nano Ledger application version
      *
      * @returns {Promise<Version>}
      */
@@ -234,7 +234,7 @@ export default class TechPayNano {
     }
 
     /**
-     * getAddress extracts TechPay wallet address for the given account and address id.
+     * getAddress extracts Meta Tech wallet address for the given account and address id.
      *
      * @param {number} accountId Zero based account identifier.
      * @param {number} addressId Zero based address identifier.
@@ -247,7 +247,7 @@ export default class TechPayNano {
     }
 
     /**
-     * listAddresses extracts sequence of logically consequent TechPay wallet addresses
+     * listAddresses extracts sequence of logically consequent Meta Tech wallet addresses
      * for the given account, initial address id and expected address length.
      *
      * Please note that user will be warned if you ask for an address range exceeding
@@ -292,7 +292,7 @@ export default class TechPayNano {
     }
 
     /**
-     * getPublicKey derives TechPay wallet public key for the given account and address id.
+     * getPublicKey derives Meta Tech wallet public key for the given account and address id.
      *
      * @param {number} accountId Zero based account identifier.
      * @param {number} addressId Zero based address identifier.
@@ -516,9 +516,9 @@ export default class TechPayNano {
     /**
      * deriveAddress derives address for the given BIP32 path.
      *
-     * Please note that the TechPay Ledger application is coded to provide
+     * Please note that the Meta Tech Ledger application is coded to provide
      * only subset of BIP32 paths with prefix "44'/60'". We don't derive
-     * addresses outside of expected TechPay address space.
+     * addresses outside of expected Meta Tech address space.
      *
      * @param {[]} bip32Path
      * @param {boolean} confirmAddress
@@ -557,9 +557,9 @@ export default class TechPayNano {
     /**
      * derivePublicKey derives public key for the given BIP32 path.
      *
-     * Please note that the TechPay Ledger application is coded to provide
+     * Please note that the Meta Tech Ledger application is coded to provide
      * only subset of BIP32 paths with prefix "44'/60'". We don't derive
-     * public keys outside of expected TechPay address space.
+     * public keys outside of expected Meta Tech address space.
      *
      * @param bip32Path
      * @returns {Promise<{}>}

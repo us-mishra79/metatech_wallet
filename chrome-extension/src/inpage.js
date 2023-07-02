@@ -306,4 +306,4 @@ window.addEventListener("message", function (event) {
     window.ethereum._receiveFromContentScript(event);
 });
 window.dispatchEvent(new Event('ethereum#initialized'));
-console.log("TechPay-PWA-Wallet initialized");
+console.log("Meta Tech-PWA-Wallet initialized");

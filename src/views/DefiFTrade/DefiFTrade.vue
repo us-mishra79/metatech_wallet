@@ -369,7 +369,7 @@ export default {
             const tpcToken = {
                 address: '0xfc00face00000000000000000000000000000000',
                 symbol: 'MTC',
-                name: 'TechPay',
+                name: 'Meta Tech',
                 isActive: true,
                 decimals: 18,
                 price: wTPC[0].price,

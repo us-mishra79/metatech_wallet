@@ -1,6 +1,6 @@
-# TechPay PWA Wallet
+# Meta Tech PWA Wallet
 
-JavaScript and Vue based TechPay pwa wallet.
+JavaScript and Vue based Meta Tech pwa wallet.
 
 We are using:
 * Node / NPM

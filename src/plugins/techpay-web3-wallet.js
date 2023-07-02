@@ -115,7 +115,7 @@ class PWDStorage {
     }
 }
 
-// TechPay web3 wallet plugin for VUE, based on https://git`hub.com/TechPay-io/techpay-web3-wallet
+// Meta Tech web3 wallet plugin for VUE, based on https://git`hub.com/Meta Tech-io/techpay-web3-wallet
 export class TechPayWeb3Wallet {
     static install(_Vue, _options) {
         fWallet = new TechPayWeb3Wallet(_options);
@@ -128,7 +128,7 @@ export class TechPayWeb3Wallet {
         this.blockchains = [
             {
                 value: 'techpay',
-                label: 'TechPay Photon',
+                label: 'Meta Tech Photon',
             },
             {
                 value: 'ethereum',

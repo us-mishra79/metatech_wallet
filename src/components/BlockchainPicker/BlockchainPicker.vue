@@ -27,7 +27,7 @@
                         aria-hidden="true"
                         class="logo-inactive"
                     />
-                    <span class="title">TechPay Photon</span>
+                    <span class="title">Meta Tech Photon</span>
                 </span>
             </label>
         </li>
