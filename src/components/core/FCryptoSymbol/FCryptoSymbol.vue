@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import tpcIcon from '../../../assets/svg/tokens/MTC.svg';
+import tpcIcon from '../../../assets/svg/tokens/TPC.svg';
 import wtpcIcon from '../../../assets/svg/tokens/wTPC.svg';
 import tusdIcon from '../../../assets/svg/tokens/tUSD.svg';
 
