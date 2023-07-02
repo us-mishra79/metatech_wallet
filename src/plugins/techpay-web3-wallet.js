@@ -580,7 +580,7 @@ export class TechPayWeb3Wallet {
     }
 
     /**
-     * Convert WEI to TPC.
+     * Convert WEI to MTC.
      *
      * @param {String|Number|BN} _value
      * @return {String|BN}
@@ -988,7 +988,7 @@ export class TechPayWeb3Wallet {
     }
 
     /**
-     * Get the remaining balance (in TPC) after deducting transaction fee.
+     * Get the remaining balance (in MTC) after deducting transaction fee.
      *
      * @param {*} _balance
      * @param {*} _gasPrice
@@ -1003,7 +1003,7 @@ export class TechPayWeb3Wallet {
     }
 
     /**
-     * Get the remaining balance (in TPC) after deducting transaction fee.
+     * Get the remaining balance (in MTC) after deducting transaction fee.
      *
      * @param {*} _balance
      * @param {*} _gasPrice

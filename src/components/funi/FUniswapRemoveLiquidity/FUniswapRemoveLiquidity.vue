@@ -444,7 +444,7 @@ export default {
         onSubmit() {
             const { fromToken } = this;
             const { toToken } = this;
-            // const tpcTokens = ['TPC', 'WTPC'];
+            // const tpcTokens = ['MTC', 'WTPC'];
             const params = {
                 fromToken: { ...fromToken },
                 toToken: { ...toToken },

@@ -50,7 +50,7 @@
                 with-icon
                 style="margin-bottom: 16px;"
             >
-                Staking limit reached. You can restake max {{ delegatedLimit }} TPC on validator
+                Staking limit reached. You can restake max {{ delegatedLimit }} MTC on validator
                 {{ dAccountInfo.stakerInfo.stakerInfo.name }}, {{ dAccountInfo.stakerId }}
             </f-message>
 

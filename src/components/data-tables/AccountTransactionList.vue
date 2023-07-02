@@ -275,7 +275,7 @@ export default {
                 },
                 {
                     name: 'amount',
-                    label: 'Amount (TPC)',
+                    label: 'Amount (MTC)',
                     itemProp: 'transaction.value',
                     formatter: (_value) => {
                         return WEIToTPC(_value);

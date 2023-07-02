@@ -62,7 +62,7 @@ export default {
         /** Replacement text for FPlaceholder. */
         replacementText: {
             type: String,
-            default: '10,000.00 TPC',
+            default: '10,000.00 MTC',
         },
         /** Currency symbol used in `formatNumberByLocale` function */
         numberCurrency: {

@@ -429,7 +429,7 @@ export default {
             ]);
 
             const fMintAccount = result[0];
-            const tokens = result[1].filter((_item) => _item.isActive && _item.symbol !== 'TPC');
+            const tokens = result[1].filter((_item) => _item.isActive && _item.symbol !== 'MTC');
 
             this.wtpcToken = tokens.find((_item) => _item.symbol === 'WTPC');
 

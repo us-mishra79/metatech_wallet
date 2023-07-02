@@ -212,7 +212,7 @@ export default {
          * @param {DefiToken[]} _value
          */
         async tokens(_value) {
-            let tokens = _value.filter((_item) => _item.isActive && _item.symbol !== 'TPC');
+            let tokens = _value.filter((_item) => _item.isActive && _item.symbol !== 'MTC');
 
             const items = tokens.filter((_item) => {
                 const debt = this.getDebt(_item);

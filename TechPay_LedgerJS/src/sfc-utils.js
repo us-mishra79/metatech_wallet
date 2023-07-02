@@ -33,7 +33,7 @@ function encodeCall(client, abi, params) {
  * createDelegationTx creates a new delegation transaction structure
  * for the given amount and validator index.
  *
- * @param {number|BN|string} amount Amount of TPC tokens in WEI units to delegate.
+ * @param {number|BN|string} amount Amount of MTC tokens in WEI units to delegate.
  * @param {int} to Id of the validator to delegate to.
  * @param {Web3|undefined} web3Client Optional instance of an initialized Web3 client.
  * @return {{data: string, to: *, value: string}}
@@ -79,7 +79,7 @@ function createDelegationTx(amount, to, web3Client) {
  * Note: A delegation has to exist already on the source address
  * for the transaction to be accepted on the server.
  *
- * @param {number|string|BN} amount Amount of TPC tokens in WEI units to delegate.
+ * @param {number|string|BN} amount Amount of MTC tokens in WEI units to delegate.
  * @param {int} to Id of the validator to delegate to.
  * @param {Web3|undefined} web3Client Optional instance of an initialized Web3 client.
  * @return {{data: string, to: *, value: string}}
@@ -198,7 +198,7 @@ function prepareToWithdrawDelegationTx(to, web3Client) {
  *
  * @param {number|string|BN} requestId Unique and unused identifier of the withdraw request.
  * @param {int} to Id of the validator the delegation belongs to.
- * @param {number|string|BN} amount Amount of TPC tokens in WEI units to be prepared for withdraw.
+ * @param {number|string|BN} amount Amount of MTC tokens in WEI units to be prepared for withdraw.
  * @param {Web3|undefined} web3Client Optional instance of an initialized Web3 client.
  * @return {{data: string, to: *, value: string}}
  */
@@ -310,7 +310,7 @@ function withdrawDelegationTx(to, web3Client) {
  *
  * @param {int} to Id of the validator the delegation belongs to.
  * @param {int} duration Number of seconds the lock should be activated.
- * @param {number|string|BN} amount Amount of TPC tokes in WEI format to be prepared for withdraw.
+ * @param {number|string|BN} amount Amount of MTC tokes in WEI format to be prepared for withdraw.
  * @param {Web3|undefined} web3Client Optional instance of an initialized Web3 client.
  * @return {{data: string, to: *, value: string}}
  */
@@ -376,7 +376,7 @@ function lockupDelegationTx(to, duration, amount, web3Client) {
  *
  * @param {int} to Id of the validator the delegation belongs to.
  * @param {int} duration Number of seconds the lock should be activated.
- * @param {number|string|BN} amount Amount of TPC tokes in WEI format to be prepared for withdraw.
+ * @param {number|string|BN} amount Amount of MTC tokes in WEI format to be prepared for withdraw.
  * @param {Web3|undefined} web3Client Optional instance of an initialized Web3 client.
  * @return {{data: string, to: *, value: string}}
  */
@@ -441,7 +441,7 @@ function relockDelegationTx(to, duration, amount, web3Client) {
  * unlockDelegationTx creates a transaction for unlocking delegation.
  *
  * @param {int} to Id of the validator the delegation belongs to.
- * @param {number|string|BN} amount Amount of TPC tokens in WEI units to be prepared for withdraw.
+ * @param {number|string|BN} amount Amount of MTC tokens in WEI units to be prepared for withdraw.
  * @param {Web3|undefined} web3Client Optional instance of an initialized Web3 client.
  * @return {{data: string, to: *, value: string}}
  */
@@ -554,7 +554,7 @@ function sfcTokenizeLockedStake(web3Client, tokenizer, stakerId) {
  * @param {Web3} web3Client
  * @param {string} tokenizer Address of the SFC tokenizer contract.
  * @param {int} stakerId Identifier of the validator the stake/delegation belongs to.
- * @param {number|string|BN} amount Amount of TPC tokens in WEI units to be redeemed.
+ * @param {number|string|BN} amount Amount of MTC tokens in WEI units to be redeemed.
  * @return {{data: string, to: *, value: string, chainId: string}}
  */
 function sfcRedeemTokenizedStake(web3Client, tokenizer, stakerId, amount) {

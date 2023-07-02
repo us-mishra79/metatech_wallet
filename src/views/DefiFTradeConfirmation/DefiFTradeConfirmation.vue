@@ -246,14 +246,14 @@ export default {
                     Web3.utils.toHex(this.$defi.shiftDecPointRight((fromValue * 1.05).toString(), fromToken.decimals))
                 );
             } else {
-                if (fromToken.symbol === 'TPC' && toToken.canWrapTPC) {
+                if (fromToken.symbol === 'MTC' && toToken.canWrapTPC) {
                     this.amountTPC = params.fromValue.toFixed(this.$defi.getTokenDecimals(params.fromToken));
 
                     txToSign = wtpcUtils.defiWrapTpc(
                         toToken.address,
                         Web3.utils.toHex(this.$defi.shiftDecPointRight(params.toValue.toString(), toToken.decimals))
                     );
-                } else if (fromToken.canWrapTPC && toToken.symbol === 'TPC') {
+                } else if (fromToken.canWrapTPC && toToken.symbol === 'MTC') {
                     const amount = Web3.utils.toHex(
                         this.$defi.shiftDecPointRight(params.fromValue.toString(), toToken.decimals)
                     );

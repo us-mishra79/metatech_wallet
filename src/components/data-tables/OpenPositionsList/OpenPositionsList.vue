@@ -178,7 +178,7 @@ export default {
          * @param {DefiToken[]} _value
          */
         tokens(_value) {
-            const items = _value.filter((_item) => _item.isActive && _item.canDeposit && _item.symbol !== 'TPC');
+            const items = _value.filter((_item) => _item.isActive && _item.canDeposit && _item.symbol !== 'MTC');
 
             this.items = items.filter((_item) => {
                 const collateral = this.getCollateral(_item);

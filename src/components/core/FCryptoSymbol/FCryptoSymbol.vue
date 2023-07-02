@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import tpcIcon from '../../../assets/svg/tokens/TPC.svg';
+import tpcIcon from '../../../assets/svg/tokens/MTC.svg';
 import wtpcIcon from '../../../assets/svg/tokens/wTPC.svg';
 import tusdIcon from '../../../assets/svg/tokens/tUSD.svg';
 
@@ -61,7 +61,7 @@ export default {
 
             if (token) {
                 switch (token.symbol) {
-                    case 'TPC':
+                    case 'MTC':
                         return tpcIcon;
                     case 'WTPC':
                         return wtpcIcon;

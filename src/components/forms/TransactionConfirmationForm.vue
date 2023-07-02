@@ -28,12 +28,12 @@
                         </div>
                         <div v-if="notEnoughTPC">
                             <f-message type="warning" with-icon class="align-start">
-                                Warning: Not enough available TPC for gas fees. Transfer TPC to your address to proceed.
+                                Warning: Not enough available MTC for gas fees. Transfer MTC to your address to proceed.
                             </f-message>
                             <br />
                         </div>
 
-                        <p class="max-fee" tabindex="0">Max Fee: {{ dMaxFee }} TPC</p>
+                        <p class="max-fee" tabindex="0">Max Fee: {{ dMaxFee }} MTC</p>
 
                         <advanced-tx-functions ref="atxfuncs" :gas-info="gasInfo" />
 

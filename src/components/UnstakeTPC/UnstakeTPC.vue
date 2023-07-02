@@ -1,13 +1,13 @@
 <template>
     <div class="unstake-tpc">
-        <h2 :id="labelId" class="not-visible" data-focus>Undelegate TPC</h2>
+        <h2 :id="labelId" class="not-visible" data-focus>Undelegate MTC</h2>
 
         <f-card class="__f-card-double-padding f-data-layout" off>
             <f-form ref="form" center-form :aria-labelledby="labelId" @f-form-submit="onFormSubmit">
                 <!--                <legend class="h2" data-focus>
                     <div class="cont-with-back-btn">
                         <span>
-                            Undelegate TPC <span class="f-steps"><b>1</b> / {{ lockExist ? '3' : '2' }}</span>
+                            Undelegate MTC <span class="f-steps"><b>1</b> / {{ lockExist ? '3' : '2' }}</span>
                         </span>
                         <button
                             type="button"
@@ -23,14 +23,14 @@
                 <div class="form-body">
                     <h3>The withdrawal of your delegated tokens will take 7 days</h3>
                     <h3 v-if="lockExist" class="orange-color" style="padding-top: 0;">
-                        {{ cToUnlockAmount }} TPC of {{ amount }} TPC are still locked.
+                        {{ cToUnlockAmount }} MTC of {{ amount }} MTC are still locked.
                         <template v-if="cUnlockPenalty > 0">
-                            You will lose {{ cUnlockPenalty }} TPC by undelegating before the lock expiration.
+                            You will lose {{ cUnlockPenalty }} MTC by undelegating before the lock expiration.
                         </template>
                     </h3>
                     <!--                    <h3 v-if="lockExist" class="orange-color" style="padding-top: 0;">
                         Your delegation is still locked. You will lose
-                        {{ cUnlockPenalty > 0 ? `${cUnlockPenalty} TPC` : 'part of your rewards' }}
+                        {{ cUnlockPenalty > 0 ? `${cUnlockPenalty} MTC` : 'part of your rewards' }}
                         by undelegating before the lock expiration.
                     </h3>-->
 
@@ -202,7 +202,7 @@ export default {
             const { undelegateMax } = this;
             let ok = false;
 
-            this.amountErrMsg = `You can undelegate min 1 TPC and max ${undelegateMax} TPC`;
+            this.amountErrMsg = `You can undelegate min 1 MTC and max ${undelegateMax} MTC`;
 
             if (!isNaN(value)) {
                 if (value >= 1 && value <= undelegateMax) {

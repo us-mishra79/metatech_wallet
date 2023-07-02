@@ -113,7 +113,7 @@ export default {
             columns: [
                 {
                     name: 'amount',
-                    label: 'Amount (TPC)',
+                    label: 'Amount (MTC)',
                     formatter: (_value) => {
                         return WEIToTPC(_value);
                     },

@@ -35,7 +35,7 @@ export function TPCToUSD(_value, _tokenPrice = 0) {
 }
 
 /**
- * Convert value to TPC.
+ * Convert value to MTC.
  *
  * @param {string|number} _value
  * @return {string}

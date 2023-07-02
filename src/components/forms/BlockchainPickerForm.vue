@@ -1,11 +1,11 @@
 <template>
     <div class="blockchain-picker-form">
         <h2 class="with-back-btn align-center" data-focus>
-            Send Photon TPC
+            Send Photon MTC
         </h2>
 
         <f-card class="f-card-double-padding">
-            <h3 :id="labelId" class="align-center">Which blockchain are you sending TPC to?</h3>
+            <h3 :id="labelId" class="align-center">Which blockchain are you sending MTC to?</h3>
 
             <div class="bc-picker">
                 <f-form ref="form" :aria-labelledby="labelId" center-form @f-form-submit="onFormSubmit">

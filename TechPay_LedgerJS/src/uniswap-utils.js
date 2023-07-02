@@ -25,8 +25,8 @@ function uniswapNativeTokenAddress(web3, routerAddress) {
 /**
  * uniswapAmountsOut returns an array of intermediate and output amounts
  * for the given exact input amount and the Uniswap path represented
- * by an array of token addresses. If you want to use native TPC token
- * on the input, or output, use Wrapped TPC token address instead.
+ * by an array of token addresses. If you want to use native MTC token
+ * on the input, or output, use Wrapped MTC token address instead.
  *
  * @param {Web3} web3
  * @param {string} routerAddress
@@ -45,8 +45,8 @@ function uniswapAmountsOut(web3, routerAddress, amountIn, path) {
 /**
  * uniswapAmountsIn returns an array of intermediate and input amounts
  * for the given exact output amount and the Uniswap path represented
- * by an array of token addresses. If you want to use native TPC token
- * on the input, or output, use Wrapped TPC token address instead.
+ * by an array of token addresses. If you want to use native MTC token
+ * on the input, or output, use Wrapped MTC token address instead.
  *
  * @param {Web3} web3
  * @param {string} routerAddress
@@ -542,7 +542,7 @@ function uniswapExactTokensForTokens(
 /**
  * uniswapExactTpcForTokens creates a contract call transaction to swap between
  * two tokens through the given swap path specified by an array of tokens where
- * the first token is the Wrapped Native TPC one and the last token is the exit one.
+ * the first token is the Wrapped Native MTC one and the last token is the exit one.
  * The input amount is exact and the output amount is specified by expected minimal quantity.
  * Fuzziness of the call is towards the output. Native token in the input amount will be send
  * from the singing account.
@@ -685,9 +685,9 @@ function uniswapTokensForExactTokens(
 /**
  * uniswapTpcForExactTokens creates a contract call transaction to swap between
  * two tokens through the given swap path specified by an array of tokens where
- * the first token is the Wrapped Native TPC and the last token is the exit one.
+ * the first token is the Wrapped Native MTC and the last token is the exit one.
  * The output amount is exact and the input amount is specified by maximal allowed
- * quantity. Fuzziness of the call is towards the input. Native TPC tokens
+ * quantity. Fuzziness of the call is towards the input. Native MTC tokens
  * in the maximal offered amount will be send to the contract, tokens remaining
  * after the swap will be returned back.
  *
@@ -755,10 +755,10 @@ function uniswapTpcForExactTokens(
 /**
  * uniswapTokensForExactTpc creates a contract call transaction to swap between
  * two tokens through the given swap path specified by an array of tokens where
- * the first token is the entry one and the last token is the Wrapped TPC. The output
+ * the first token is the entry one and the last token is the Wrapped MTC. The output
  * amount is exact and the input amount is specified by maximal allowed quantity.
  * Fuzziness of the call is towards the input. Sufficient allowance is required
- * on input token to cover the max amount offered. Native TPC is returned on success.
+ * on input token to cover the max amount offered. Native MTC is returned on success.
  *
  * @param {Web3} web3
  * @param {string} routerAddress
@@ -829,10 +829,10 @@ function uniswapTokensForExactTpc(
 /**
  * uniswapExactTokensForTpc creates a contract call transaction to swap between
  * two tokens through the given swap path specified by an array of tokens where
- * the first token is the entry one and the last token is the Wrapped TPC. The input
+ * the first token is the entry one and the last token is the Wrapped MTC. The input
  * amount is exact and the output amount is specified by minimal expected quantity.
  * Fuzziness of the call is towards the output. Sufficient allowance is required
- * on input token to cover the max amount offered. Native TPC is returned on success.
+ * on input token to cover the max amount offered. Native MTC is returned on success.
  *
  * @param {Web3} web3
  * @param {string} routerAddress

@@ -615,7 +615,7 @@ export default {
         updateMessage() {
             /*
             if (this.availableTPC <= 0.01) {
-                this.message = 'Deposit more TPC to increase your collateral';
+                this.message = 'Deposit more MTC to increase your collateral';
             } else {
                 this.message = '';
             }

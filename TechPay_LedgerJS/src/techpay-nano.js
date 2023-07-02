@@ -157,7 +157,7 @@ export default class TechPayNano {
      * @param {Transport} transport
      * @param {string} ledgerAppKey APDU proxy key of the Ledger application
      */
-    constructor(transport, ledgerAppKey = "TPC") {
+    constructor(transport, ledgerAppKey = "MTC") {
         // keep the transport
         this.transport = transport;
 

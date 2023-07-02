@@ -43,7 +43,7 @@ const appConfig = {
         useETH: false,
         // use Binance chain
         useBNB: false,
-        // minimal amount of TPC to ETH transfer
+        // minimal amount of MTC to ETH transfer
         minTPCToTransfer: 50,
     },
     disableFLend: true,

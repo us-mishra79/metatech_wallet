@@ -4,7 +4,7 @@
             :tx="tx"
             confirmation-comp-name="delegation-unlock-confirmation"
             send-button-label="Unlock"
-            password-label="Please enter your wallet password to unlock your delegated TPC"
+            password-label="Please enter your wallet password to unlock your delegated MTC"
             set-tmp-pwd
             :tmp-pwd-code="tmpPwdCode"
             :on-send-transaction-success="onSendTransactionSuccess"
@@ -14,7 +14,7 @@
             class="min-h-100"
             @cancel-button-click="$emit('cancel-button-click', $event)"
         >
-            <h2 class="not-visible" data-focus>Unlock TPC - Confirmation</h2>
+            <h2 class="not-visible" data-focus>Unlock MTC - Confirmation</h2>
 
             <div class="transaction-info">
                 <div class="row no-collapse">
@@ -69,17 +69,17 @@ export default {
                 return {};
             },
         },
-        /** Amount of TPC tokens to unstake */
+        /** Amount of MTC tokens to unstake */
         amount: {
             type: Number,
             default: 1,
         },
-        /** Amount of TPC tokens to unlock. (hex number) */
+        /** Amount of MTC tokens to unlock. (hex number) */
         toUnlockAmount: {
             type: String,
             default: '',
         },
-        /** Unlock maximal amount of TPC tokens */
+        /** Unlock maximal amount of MTC tokens */
         undelegateMax: {
             type: Boolean,
             default: false,

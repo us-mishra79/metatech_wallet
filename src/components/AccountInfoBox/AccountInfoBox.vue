@@ -8,7 +8,7 @@
                         <span class="not-visible">Available balance</span>
                         <span>
                             <t-p-c-token-value :value="accountBalance" convert no-currency />
-                            <span class="tpc"> TPC</span>
+                            <span class="tpc"> MTC</span>
                         </span>
                     </h2>
                     <div class="currency">
@@ -25,7 +25,7 @@
                         <span class="not-visible">Total balance</span>
                         <span>
                             <t-p-c-token-value :value="accountTotalBalance" convert no-currency />
-                            <span class="tpc"> TPC</span>
+                            <span class="tpc"> MTC</span>
                         </span>
                     </h2>
                     <div class="currency">

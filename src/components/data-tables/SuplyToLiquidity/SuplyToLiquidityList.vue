@@ -160,7 +160,7 @@ export default {
          * @param {DefiToken[]} _value
          */
         tokens(_value) {
-            this.items = _value.filter((_item) => _item.isActive && _item.canDeposit && _item.symbol !== 'TPC');
+            this.items = _value.filter((_item) => _item.isActive && _item.canDeposit && _item.symbol !== 'MTC');
 
             this.$emit('records-count', this.items.length);
         },

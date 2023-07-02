@@ -4,7 +4,7 @@
             :tx="tx"
             confirmation-comp-name="withdraw-tpc-confirmation"
             send-button-label="Withdraw"
-            password-label="Please enter your wallet password to withdraw your TPC"
+            password-label="Please enter your wallet password to withdraw your MTC"
             :on-send-transaction-success="onSendTransactionSuccess"
             card-off
             :show-cancel-button="true"
@@ -12,7 +12,7 @@
             class="min-h-100"
             @cancel-button-click="$emit('cancel-button-click', $event)"
         >
-            <h2 class="not-visible" data-focus>Withdraw delegated TPC - Confirmation</h2>
+            <h2 class="not-visible" data-focus>Withdraw delegated MTC - Confirmation</h2>
 
             <div class="transaction-info">
                 <div class="row no-collapse">
@@ -79,7 +79,7 @@ export default {
                 return {};
             },
         },
-        /** Amount of TPC tokens to withdraw */
+        /** Amount of MTC tokens to withdraw */
         amount: {
             type: Number,
             default: 1,

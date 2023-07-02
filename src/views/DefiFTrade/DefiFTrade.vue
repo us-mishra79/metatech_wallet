@@ -291,7 +291,7 @@ export default {
                 max = this.fromTokenBalance;
             }
 
-            if (fromTokenSymbol === 'TPC') {
+            if (fromTokenSymbol === 'MTC') {
                 max -= 2;
             }
 
@@ -368,7 +368,7 @@ export default {
             const account = await this.$fWallet.getBalance(this.currentAccount.address, false, true);
             const tpcToken = {
                 address: '0xfc00face00000000000000000000000000000000',
-                symbol: 'TPC',
+                symbol: 'MTC',
                 name: 'TechPay',
                 isActive: true,
                 decimals: 18,
@@ -380,10 +380,10 @@ export default {
             };
             this.$defi._setTokenDecimals(tpcToken);
 
-            // add TPC
+            // add MTC
             result[1].unshift(tpcToken);
 
-            this.tokens = result[1].filter((_token) => _token && (_token.symbol === 'TPC' || _token.canWrapTPC));
+            this.tokens = result[1].filter((_token) => _token && (_token.symbol === 'MTC' || _token.canWrapTPC));
 
             // this.tokens = result[1].filter($defi.canTokenBeTraded);
 
@@ -628,7 +628,7 @@ export default {
         onSubmit() {
             const { fromToken } = this;
             const { toToken } = this;
-            // const tpcTokens = ['TPC', 'WTPC'];
+            // const tpcTokens = ['MTC', 'WTPC'];
             const params = {
                 fromValue: this.fromValue,
                 toValue: this.toValue,
@@ -637,7 +637,7 @@ export default {
                 max: this.maxFromInputValue === this.fromValue,
             };
 
-            if (fromToken.canWrapTPC && toToken.symbol === 'TPC') {
+            if (fromToken.canWrapTPC && toToken.symbol === 'MTC') {
                 this.stepsCount = 2;
                 params.steps = this.stepsCount;
                 params.step = this.$refs.confirmationWindow.activeStep;

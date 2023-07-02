@@ -3,7 +3,7 @@
         <tx-confirmation
             :tx="tx"
             confirmation-comp-name="stake-confirmation"
-            password-label="Please enter your wallet password to delegate your TPC"
+            password-label="Please enter your wallet password to delegate your MTC"
             send-button-label="Delegate"
             :on-send-transaction-success="onSendTransactionSuccess"
             card-off
@@ -12,7 +12,7 @@
             class="min-h-100"
             @cancel-button-click="$emit('cancel-button-click', $event)"
         >
-            <h2 class="not-visible" data-focus>Delegate TPC</h2>
+            <h2 class="not-visible" data-focus>Delegate MTC</h2>
 
             <div class="transaction-info">
                 <div class="row no-collapse">
@@ -25,7 +25,7 @@
                     <div class="col break-word">
                         {{ currentAccount.address }}
                         <span class="f-row-label">
-                            ( {{ toTPC(currentAccount.balance) }} TPC
+                            ( {{ toTPC(currentAccount.balance) }} MTC
                             <template v-if="currentAccount.name">, {{ currentAccount.name }}</template> )
                         </span>
                     </div>
@@ -56,7 +56,7 @@ export default {
     components: { LedgerConfirmationContent, TxConfirmation },
 
     props: {
-        /** Data sent from StakeForm component. Info about transaction, validator and amount of TPC. */
+        /** Data sent from StakeForm component. Info about transaction, validator and amount of MTC. */
         stakeData: {
             type: Object,
             default() {

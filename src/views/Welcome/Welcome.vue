@@ -2,7 +2,7 @@
     <div class="welcome-view">
         <div class="intro">
             <h1>Welcome to <strong>Meta Tech Wallet</strong></h1>
-            <h2><strong>Send</strong>, <strong>receive</strong> and <strong>stake</strong> your Photon TPC</h2>
+            <h2><strong>Send</strong>, <strong>receive</strong> and <strong>stake</strong> your Photon MTC</h2>
         </div>
 
         <div class="view-account-main">

@@ -3,7 +3,7 @@
         C-Ratio needs to be at least 300%.<br />
         If your C-Ratio is above 500%, you’ll earn rewards in wTPC.<br />
         If your C-Ratio falls below 300%, your wTPC will be locked (not liquidated) until the C-Ratio goes back to at
-        least 300%. That can happen either via TPC price fluctuations or if you add more wTPC as collateral.
+        least 300%. That can happen either via MTC price fluctuations or if you add more wTPC as collateral.
     </f-info>
 </template>
 

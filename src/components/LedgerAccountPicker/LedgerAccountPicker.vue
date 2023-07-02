@@ -1,7 +1,7 @@
 <template>
     <div class="ledger-account-picker">
         <div v-if="showLedgerConnectMessage" class="ledger-connect-message">
-            Please connect your ledger device and select TechPay TPC app.
+            Please connect your ledger device and select TechPay MTC app.
             <div v-if="showTryAgainButton" class="button-footer">
                 <button class="btn large" @click="onTryAgainBtnClick">Try again</button>
             </div>
@@ -15,7 +15,7 @@
                                 {{ account.address }}
                             </a>
                         </h3>
-                        <div class="col">{{ toTPC(account.balance) }} TPC</div>
+                        <div class="col">{{ toTPC(account.balance) }} MTC</div>
                     </div>
                 </li>
             </ul>

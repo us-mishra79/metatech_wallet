@@ -21,8 +21,8 @@
                                     :default-icon-size="16" class="btn light same-size round">
                                     <template #popover-text>
                                         Address copied to clipboard. <br />
-                                        Warning: Use this address to receive Photon TPC only. If you are receiving
-                                        TPC-ERC20 you need to use a different address!
+                                        Warning: Use this address to receive Photon MTC only. If you are receiving
+                                        MTC-ERC20 you need to use a different address!
                                     </template>
                                 </f-copy-button>
 
@@ -40,7 +40,7 @@
                             <span class="wallet-info">
                                 <span class="value">
                                     <t-p-c-token-value :value="account.balance" convert no-currency />
-                                    <span class="tpc"> TPC</span>
+                                    <span class="tpc"> MTC</span>
                                 </span>
                                 <span class="currency">
                                     <t-p-c-token-value :value="WEIToTPC(account.balance) * tokenPrice" with-price-currency
@@ -51,7 +51,7 @@
                             <span class="wallet-info">
                                 <span class="value">
                                     <t-p-c-token-value :value="account.totalBalance" convert no-currency />
-                                    <span class="tpc"> TPC</span>
+                                    <span class="tpc"> MTC</span>
                                 </span>
                                 <span class="currency">
                                     <t-p-c-token-value :value="WEIToTPC(account.totalBalance) * tokenPrice"

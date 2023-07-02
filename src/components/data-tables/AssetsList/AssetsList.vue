@@ -337,8 +337,8 @@ export default {
          */
         tokens(_value) {
             let tokens = _value.filter((_item) => {
-                // return _item.isActive && (_item.canDeposit || _item.canMint) && _item.symbol !== 'TPC';
-                return _item.isActive && _item.symbol !== 'TPC';
+                // return _item.isActive && (_item.canDeposit || _item.canMint) && _item.symbol !== 'MTC';
+                return _item.isActive && _item.symbol !== 'MTC';
             });
 
             tokens.forEach((_item) => {

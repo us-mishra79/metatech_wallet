@@ -34,7 +34,7 @@
                             >
                                 <template #popover-text>
                                     Address copied to clipboard. <br />
-                                    Warning: Use this address to receive Photon TPC only. If you are receiving TPC-ERC20
+                                    Warning: Use this address to receive Photon MTC only. If you are receiving MTC-ERC20
                                     you need to use a different address!
                                 </template>
                             </f-copy-button>
@@ -130,7 +130,7 @@
 
         <q-r-code-window ref="qrWindow" :address="contactData.address">
             <f-message v-show="blockchain === 'techpay'" type="warning" with-icon>
-                Warning: Use this address to receive Photon TPC only. If you are receiving TPC-ERC20 you need to use a
+                Warning: Use this address to receive Photon MTC only. If you are receiving MTC-ERC20 you need to use a
                 different address!
             </f-message>
         </q-r-code-window>
@@ -284,7 +284,7 @@ export default {
             let address = _value;
             if (blockchain === 'techpay' && resolution.isSupportedDomainInNetwork(_value)) {
                 try {
-                    this.resolvedAddress = address = await resolution.multiChainAddr(_value, 'TPC', 'PHOTON');
+                    this.resolvedAddress = address = await resolution.multiChainAddr(_value, 'MTC', 'PHOTON');
                 } catch (e) {
                     console.log('Domain resolution failed', e);
                 }

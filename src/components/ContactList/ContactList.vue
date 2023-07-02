@@ -41,8 +41,8 @@
                                             Address copied to clipboard.
                                             <template v-if="contact.blockchain === 'techpay'">
                                                 <br />
-                                                Warning: Use this address to receive Photon TPC only. If you are
-                                                receiving TPC-ERC20 you need to use a different address!
+                                                Warning: Use this address to receive Photon MTC only. If you are
+                                                receiving MTC-ERC20 you need to use a different address!
                                             </template>
                                         </template>
                                     </f-copy-button>

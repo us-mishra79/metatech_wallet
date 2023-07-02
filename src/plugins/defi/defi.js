@@ -99,7 +99,7 @@ export class DeFi {
     _setTokens(_tokens) {
         this.tokens = _tokens;
         this.tusdToken = _tokens.find((_item) => _item.symbol === 'TUSD');
-        this.tpcToken = _tokens.find((_item) => _item.symbol === 'TPC');
+        this.tpcToken = _tokens.find((_item) => _item.symbol === 'MTC');
 
         /*
         if (isObjectEmpty(this.tokenDecimals)) {
@@ -282,7 +282,7 @@ export class DeFi {
      */
     getTokenSymbol(_token) {
         return _token && _token.symbol
-            ? _token.symbol !== 'TPC'
+            ? _token.symbol !== 'MTC'
                 ? lowercaseFirstChar(_token.symbol)
                 : _token.symbol
             : '';
@@ -636,7 +636,7 @@ export class DeFi {
      * @return {boolean}
      */
     canTokenBeDeposited(_token) {
-        return _token && _token.isActive && _token.canDeposit && _token.symbol !== 'TPC';
+        return _token && _token.isActive && _token.canDeposit && _token.symbol !== 'MTC';
     }
 
     /**
@@ -645,7 +645,7 @@ export class DeFi {
      */
     canTokenBeTraded(_token) {
         // return _token && _token.isActive && _token.canTrade;
-        return _token && _token.isActive && (_token.canTrade || _token.symbol === 'TPC');
+        return _token && _token.isActive && (_token.canTrade || _token.symbol === 'MTC');
         // return _token && _token.isActive && (_token.canTrade || _token.symbol === 'TUSD');
     }
 

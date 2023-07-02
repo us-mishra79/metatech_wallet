@@ -26,7 +26,7 @@
 
                 <div class="row no-collapse">
                     <div class="col-3 f-row-label">Amount</div>
-                    <div class="col">{{ amount }} TPC</div>
+                    <div class="col">{{ amount }} MTC</div>
                 </div>
 
                 <div class="row no-collapse">

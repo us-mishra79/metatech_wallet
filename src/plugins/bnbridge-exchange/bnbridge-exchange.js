@@ -130,7 +130,7 @@ export class BNBridgeExchange {
     async getTechPayToken() {
         const tokens = await this.getTokens();
 
-        return tokens ? tokens.find((_token) => _token.symbol === 'TPC') : undefined;
+        return tokens ? tokens.find((_token) => _token.symbol === 'MTC') : undefined;
     }
 
     /**
@@ -590,7 +590,7 @@ export class BNBridgeExchange {
      * @return {string}
      */
     getTPCCurrencyByDirection(_direction) {
-        let currency = 'TPC';
+        let currency = 'MTC';
 
         if (_direction === 'PhotonToPhoton') {
             currency += '-Photon';

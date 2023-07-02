@@ -117,7 +117,7 @@ export const store = new Vuex.Store({
         activeAccountIndex: -1,
         activeAccountAddress: '',
         /**
-         * Which blockchain TPC will be sent to
+         * Which blockchain MTC will be sent to
          *
          * @type {BNBridgeDirection}
          */
@@ -148,7 +148,7 @@ export const store = new Vuex.Store({
             return _state.activeAccountAddress;
         },
         /**
-         * Which blockchain TPC will be sent to
+         * Which blockchain MTC will be sent to
          *
          * @param {Object} _state
          * @return {BNBridgeDirection}

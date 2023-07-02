@@ -17,7 +17,7 @@ const TESTNET_CHAIN_ID = '0x9af';
 
 /**
  * defiWrapTpc creates a contract call transaction to wrap given amount
- * of native TPC tokens into the wTPC tokens used among DeFi protocols.
+ * of native MTC tokens into the wTPC tokens used among DeFi protocols.
  *
  * @param {string} erc20Address
  * @param {string|{BN}} amount
@@ -55,7 +55,7 @@ function defiWrapTpc(erc20Address, amount) {
 
 /**
  * defiWrapTpc creates a contract call transaction to unwrap given amount
- * of wrapped wTPC tokens used among DeFi protocols back to the native TPC tokens.
+ * of wrapped wTPC tokens used among DeFi protocols back to the native MTC tokens.
  *
  * @param {string} erc20Address
  * @param {string|{BN}} amount

@@ -24,7 +24,7 @@
                     <div class="col-3 f-row-label">From</div>
                     <div class="col break-word">
                         {{ currentAccount.address }}
-                        <!--<span class="f-row-label">( {{ toTPC(currentAccount.balance) }} TPC )</span>-->
+                        <!--<span class="f-row-label">( {{ toTPC(currentAccount.balance) }} MTC )</span>-->
                     </div>
                 </div>
 

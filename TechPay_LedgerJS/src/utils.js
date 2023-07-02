@@ -1,7 +1,7 @@
 // BIP32_HARDENED specifies BIP32 path element which is to be hardened.
 export const BIP32_HARDENED = 0x80000000;
 
-// MAX_TPC_TRANSFER_STR represents maximum amount of TPC tokens (in WEI units) transferable by a transaction.
+// MAX_TPC_TRANSFER_STR represents maximum amount of MTC tokens (in WEI units) transferable by a transaction.
 const MAX_TPC_TRANSFER_STR = ["2", "284", "136", "835", "000000000000000000"].join("");
 
 // REQUIRED_TX_ATTRIBUTES represents a list of object attributes we require

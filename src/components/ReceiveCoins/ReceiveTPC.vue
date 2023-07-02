@@ -1,7 +1,7 @@
 <template>
     <div class="receive-tpc">
         <div class="align-center">
-            Send your Photon TPC to:
+            Send your Photon MTC to:
 
             <h3 class="address break-word" :class="addressCssClass">
                 {{ currentAccount.address }} &nbsp;
@@ -20,7 +20,7 @@
                 >
                     <template #popover-text>
                         Address copied to clipboard. <br />
-                        Warning: Use this address to receive Photon TPC only. If you are receiving TPC-ERC20 you need to
+                        Warning: Use this address to receive Photon MTC only. If you are receiving MTC-ERC20 you need to
                         use a different address!
                     </template>
                 </f-copy-button>
@@ -46,7 +46,7 @@
 
         <q-r-code-window ref="qrWindow" :address="currentAccount.address">
             <f-message type="warning" with-icon>
-                Warning: Use this address to receive Photon TPC only. If you are receiving TPC-ERC20 you need to use a
+                Warning: Use this address to receive Photon MTC only. If you are receiving MTC-ERC20 you need to use a
                 different address!
             </f-message>
         </q-r-code-window>
@@ -87,7 +87,7 @@ export default {
     components: { FMessage, QRCodeWindow, FCopyButton, FWindow, LedgerMessage, PulseLoader },
 
     props: {
-        /** Start verify TPC account */
+        /** Start verify MTC account */
         verifyAccount: {
             type: Boolean,
             default: false,

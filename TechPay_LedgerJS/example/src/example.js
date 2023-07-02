@@ -93,7 +93,7 @@ async function getSignedTransaction(bridge) {
         gasPrice: "0x3b9aca00",
         gasLimit: "0xabe0",
         to: "0x76AE07E6D236c1aE3F5C3112F387ad82c69A2471", /* Sunstone */
-        value: "0xde0b6b3a7640000", /* 1 TPC in WEI (1e+18) in HEX */
+        value: "0xde0b6b3a7640000", /* 1 MTC in WEI (1e+18) in HEX */
         // data: "0x506f6b7573", /* string Test */
         data: "0xc312eb070000000000000000000000000000000000000000000000000000000000000003",
         chainId: "0xa09"

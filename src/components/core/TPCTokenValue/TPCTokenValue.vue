@@ -8,7 +8,7 @@
             no-currency
             v-bind="$attrs"
         />
-        <span v-if="!noCurrency"> TPC</span>
+        <span v-if="!noCurrency"> MTC</span>
     </span>
 </template>
 
@@ -27,7 +27,7 @@ export default {
             type: [String, Number],
             default: 0,
         },
-        /** Convert value to TPC */
+        /** Convert value to MTC */
         convert: {
             type: Boolean,
             default: false,

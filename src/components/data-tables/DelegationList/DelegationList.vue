@@ -228,7 +228,7 @@ export default {
                 },
                 {
                     name: 'amount',
-                    label: 'Amount (TPC)',
+                    label: 'Amount (MTC)',
                     itemProp: 'delegation.amount',
                     formatter: (_value) => WEIToTPC(_value),
                     width: '160px',
@@ -236,7 +236,7 @@ export default {
                 },
                 /*{
                     name: 'rewards',
-                    label: 'Pending Rewards (TPC)',
+                    label: 'Pending Rewards (MTC)',
                     itemProp: 'delegation.pendingRewards',
                     formatter: (_value) => (_value ? formatNumberByLocale(WEIToTPC(_value.amount)) : '-'),
                     width: '160px',

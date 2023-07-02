@@ -14,7 +14,7 @@
                                 class="icon-fill-color"
                             />
                         </div>
-                        <p class="description">Mint tUSD by locking your TPC</p>
+                        <p class="description">Mint tUSD by locking your MTC</p>
                         <router-link :to="{ name: 'defi-fmint' }" class="clickable title">
                             Mint tUSD
                         </router-link>
@@ -32,7 +32,7 @@
                                 class="icon-stroke-color"
                             />
                         </div>
-                        <p class="description">Trade synthetic assets to TPC and tUSD</p>
+                        <p class="description">Trade synthetic assets to MTC and tUSD</p>
                         <div class="title">
                             <router-link :to="{ name: 'defi-ftrade' }" class="clickable title">
                                 Start Trading
@@ -45,7 +45,7 @@
                         <div class="icon">
                             <icon data="@/assets/svg/defi/ftrade.svg" width="96" height="96" original />
                         </div>
-                        <p class="description">Trade synthetic assets to TPC and tUSD</p>
+                        <p class="description">Trade synthetic assets to MTC and tUSD</p>
                         <div class="title">Coming Soon</div>
                     </div>
                     -->

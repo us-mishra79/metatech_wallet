@@ -4,7 +4,7 @@
             :tx="tx"
             confirmation-comp-name="unstake-confirmation"
             send-button-label="Undelegate"
-            password-label="Please enter your wallet password to undelegate your TPC"
+            password-label="Please enter your wallet password to undelegate your MTC"
             :on-send-transaction-success="onSendTransactionSuccess"
             :tmp-pwd-code="tmpPwdCode"
             card-off
@@ -13,7 +13,7 @@
             class="min-h-100"
             @cancel-button-click="$emit('cancel-button-click', $event)"
         >
-            <h2 class="not-visible" data-focus>Undelegate TPC - Confirmation</h2>
+            <h2 class="not-visible" data-focus>Undelegate MTC - Confirmation</h2>
 
             <div class="transaction-info">
                 <div class="row no-collapse">
@@ -38,7 +38,7 @@
                     <div class="col break-word">{{ dAmount }}</div>
                 </div>
 
-                <f-message v-if="amountDiff > 0" type="warning"> {{ amountDiff }} TPC slashing applied </f-message>
+                <f-message v-if="amountDiff > 0" type="warning"> {{ amountDiff }} MTC slashing applied </f-message>
             </div>
 
             <template #window-content>
@@ -70,17 +70,17 @@ export default {
                 return {};
             },
         },
-        /** Amount of TPC tokens to unstake */
+        /** Amount of MTC tokens to unstake */
         amount: {
             type: Number,
             default: 1,
         },
-        /** Amount of TPC tokens to unlock. (hex number) */
+        /** Amount of MTC tokens to unlock. (hex number) */
         toUnlockAmount: {
             type: String,
             default: '',
         },
-        /** Unstake maximal amount of TPC tokens */
+        /** Unstake maximal amount of MTC tokens */
         undelegateMax: {
             type: Boolean,
             default: false,

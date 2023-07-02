@@ -14,7 +14,7 @@
         >
             <h2 class="not-visible" data-focus>
                 <span v-if="token.address"> Send {{ tokenSymbol }} </span>
-                <span v-else>Send Photon TPC</span>
+                <span v-else>Send Photon MTC</span>
             </h2>
 
             <div class="transaction-info">
@@ -31,7 +31,7 @@
                             <template v-if="token.address">
                                 <f-token-value :value="sendToAddressBalance" :token="token" />
                             </template>
-                            <template v-else-if="sendToAddressBalance"> {{ sendToAddressBalance }} TPC </template>
+                            <template v-else-if="sendToAddressBalance"> {{ sendToAddressBalance }} MTC </template>
                             <template v-if="sendToAccountName">, {{ sendToAccountName }} </template> )
                         </span>
                     </div>
@@ -65,11 +65,11 @@
 
                 <template v-if="sendDirection !== 'PhotonToPhoton'">
                     <f-message type="warning" class="align-center">
-                        All bridge transactions incur a fee of {{ minTPCToTransfer }} TPC, deducted from the transfer
+                        All bridge transactions incur a fee of {{ minTPCToTransfer }} MTC, deducted from the transfer
                         amount.
                     </f-message>
                     <f-message type="info" class="big">
-                        You will receive <b>{{ txData.amount - minTPCToTransfer }} TPC</b>
+                        You will receive <b>{{ txData.amount - minTPCToTransfer }} MTC</b>
                     </f-message>
                     <br />
                 </template>
@@ -91,7 +91,7 @@
                                 {{ txData.photon_address }}
                                 <span v-show="sendToAddressBalance" class="f-row-label">
                                     <template v-if="sendToAddressBalance">
-                                        ( {{ toTPC(sendToAddressBalance.balance) }} TPC )
+                                        ( {{ toTPC(sendToAddressBalance.balance) }} MTC )
                                     </template>
                                 </span>
                             </div>
@@ -104,7 +104,7 @@
                                 {{ currentAccount.address }}
                                 <span class="f-row-label">
                                     <template v-if="currentAccount.name"><br /></template>
-                                    ( {{ toTPC(currentAccount.balance) }} TPC
+                                    ( {{ toTPC(currentAccount.balance) }} MTC
                                     <template v-if="currentAccount.name">, {{ currentAccount.name }}</template> )
                                 </span>
                             </div>
@@ -124,10 +124,10 @@
                     </li>
                 </ol>
                 <f-message v-if="sendDirection === 'PhotonToEthereum'" type="warning" class="align-center">
-                    All bridge transactions incur a fee of {{ minTPCToTransfer }} TPC, deducted from the transfer
+                    All bridge transactions incur a fee of {{ minTPCToTransfer }} MTC, deducted from the transfer
                     amount.
                     <br />
-                    You will receive {{ txData.amount - minTPCToTransfer }} TPC
+                    You will receive {{ txData.amount - minTPCToTransfer }} MTC
                     <br />
                 </f-message>
             </template>
@@ -190,7 +190,7 @@ export default {
         tokenSymbol() {
             const { token } = this;
 
-            return token.address ? this.$defi.getTokenSymbol(token) : 'TPC';
+            return token.address ? this.$defi.getTokenSymbol(token) : 'MTC';
         },
 
         /**

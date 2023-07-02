@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h2 class="align-center" data-focus>Receive Photon TPC</h2>
+        <h2 class="align-center" data-focus>Receive Photon MTC</h2>
 
         <f-card class="receive-coins f-card-double-padding">
-            <h3 :id="labelId" class="align-center">Which blockchain are you receiving TPC from?</h3>
+            <h3 :id="labelId" class="align-center">Which blockchain are you receiving MTC from?</h3>
 
             <blockchain-picker
                 disable-e-t-h
@@ -42,7 +42,7 @@ export default {
     mixins: [eventBusMixin],
 
     props: {
-        /** Start verify TPC account in ReceiveTPC component */
+        /** Start verify MTC account in ReceiveTPC component */
         verifyAccount: {
             type: Boolean,
             default: false,

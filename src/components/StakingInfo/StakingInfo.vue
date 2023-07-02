@@ -35,7 +35,7 @@
                             <f-placeholder :content-loaded="!!accountInfo" block :replacement-num-chars="10">
                                 <template v-if="accountInfo">
                                     -
-                                    <!--{{ toTPC(accountInfo.claimedRewards) }} TPC-->
+                                    <!--{{ toTPC(accountInfo.claimedRewards) }} MTC-->
                                 </template>
                             </f-placeholder>
                         </div>
@@ -133,7 +133,7 @@
                                 </f-message>
                                 <!--
                                 <h3 class="align-center">
-                                    Your {{ toTPC(accountInfo.delegated) }} Photon TPC is available for withdraw in 7 days.
+                                    Your {{ toTPC(accountInfo.delegated) }} Photon MTC is available for withdraw in 7 days.
                                 </h3>
                                 -->
                             </template>
@@ -750,7 +750,7 @@ export default {
                     stakerId: this.d_stakerId,
                 },
                 stepsCount: isLocked ? 4 : 3,
-                windowTitle: 'Undelegate TPC',
+                windowTitle: 'Undelegate MTC',
                 steps: isLocked
                     ? ['Unlock', 'Confirm', 'Undelegate', 'Finished']
                     : ['Undelegate', 'Confirm', 'Finished'],
@@ -1014,7 +1014,7 @@ export default {
                     withdrawRequest: _withdrawRequest,
                     stakerId: this.d_stakerId,
                 },
-                windowTitle: 'Withdraw delegated TPC',
+                windowTitle: 'Withdraw delegated MTC',
             });
 
             /*this.$emit('change-component', {

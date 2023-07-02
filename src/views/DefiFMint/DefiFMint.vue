@@ -232,7 +232,7 @@
                     <div class="icon">
                         <icon data="@/assets/svg/defi/mint.svg" width="96" height="96" />
                     </div>
-                    <p class="description">Lock TPC to use it as collateral and mint tUSD</p>
+                    <p class="description">Lock MTC to use it as collateral and mint tUSD</p>
                     <div class="title">Coming Soon</div>
                 </div>
             </li>
@@ -242,7 +242,7 @@
                     <div class="icon">
                         <icon data="@/assets/svg/defi/mint.svg" width="96" height="96" />
                     </div>
-                    <p class="description">Mint tUSD by locking your TPC</p>
+                    <p class="description">Mint tUSD by locking your MTC</p>
                     <router-link :to="{ name: 'defi-borrow-tusd' }" class="clickable title">
                         Mint tUSD
                     </router-link>
@@ -254,7 +254,7 @@
                     <div class="icon">
                         <icon data="@/assets/svg/defi/repay.svg" width="96" height="96" />
                     </div>
-                    <p class="description">Repay the tUSD you minted and unlock your TPC</p>
+                    <p class="description">Repay the tUSD you minted and unlock your MTC</p>
                     <div class="title">Coming Soon</div>
                 </div>
             </li>

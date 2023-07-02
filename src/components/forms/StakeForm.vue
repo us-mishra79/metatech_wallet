@@ -1,7 +1,7 @@
 <template>
     <div class="stake-form" :class="{ 'increase-delegation': d_increaseDelegation }">
-        <h1 :id="labelId" data-focus class="with-back-btn align-center" aria-label="Delegate TPC">
-            <span>Delegate TPC</span>
+        <h1 :id="labelId" data-focus class="with-back-btn align-center" aria-label="Delegate MTC">
+            <span>Delegate MTC</span>
             <f-back-button ref="backButton" :route-name="getBackButtonRoute('staking-stake-form')" />
         </h1>
         <br />
@@ -26,7 +26,7 @@
                                 <div class="input-label-layout">
                                     <label :for="sProps.inputId">{{ sProps.label }}</label>
                                     <button type="button" class="btn light small" @click="onEntireBalanceClick">
-                                        Entire Balance -2 TPC
+                                        Entire Balance -2 MTC
                                     </button>
                                 </div>
                             </template>
@@ -80,7 +80,7 @@
             ref="confirmationWindow"
             body-min-height="350px"
             window-class="send-transaction-form-tx-window"
-            window-title="Delegate TPC"
+            window-title="Delegate MTC"
             :steps-count="1"
             :active-step="1"
             @cancel-button-click="onCancelButtonClick"
@@ -246,9 +246,9 @@ export default {
                 } else if (remainingBalance < 0) {
                     this.amountErrMsg = `You have no balance left`;
                 } else if (value > 0 && value < 1) {
-                    this.amountErrMsg = `You can't stake amount less than 1 TPC`;
+                    this.amountErrMsg = `You can't stake amount less than 1 MTC`;
                 } else if (value >= 1) {
-                    this.amountErrMsg = `You can stake max ${remainingBalance} TPC`;
+                    this.amountErrMsg = `You can stake max ${remainingBalance} MTC`;
                 }
             }
 
@@ -257,7 +257,7 @@ export default {
 
                 if (value > delegatedLimit) {
                     this.amountErrMsg =
-                        `Staking limit reached. You can stake max ${delegatedLimit} TPC on validator ` + this.validator;
+                        `Staking limit reached. You can stake max ${delegatedLimit} MTC on validator ` + this.validator;
                     ok = false;
                 }
             }
@@ -293,7 +293,7 @@ export default {
         /**
          * Get transaction object for staking and change view to `StakeConfirmation`.
          *
-         * @param {Number} _amount Amount of TPC to stake.
+         * @param {Number} _amount Amount of MTC to stake.
          * @return {Promise<void>}
          */
         async stakeCofirmation(_amount) {

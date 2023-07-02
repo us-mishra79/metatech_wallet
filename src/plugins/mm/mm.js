@@ -13,7 +13,7 @@ export const PHOTON_MAINNET = {
     chainName: 'TechPay Photon Mainnet',
     nativeCurrency: {
         name: 'TechPay',
-        symbol: 'TPC',
+        symbol: 'MTC',
         decimals: 18,
     },
     rpcUrls: [appConfig.mainnet.rpc],
@@ -26,7 +26,7 @@ export const PHOTON_TESTNET = {
     chainName: 'TechPay Testnet',
     nativeCurrency: {
         name: 'TechPay',
-        symbol: 'TPC',
+        symbol: 'MTC',
         decimals: 18,
     },
     rpcUrls: [appConfig.testnet.rpc],

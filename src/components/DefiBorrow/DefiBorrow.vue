@@ -342,7 +342,7 @@ export default {
         },
 
         /**
-         * Temporarily take TPC as collateral.
+         * Temporarily take MTC as collateral.
          *
          * @return {number}
          */

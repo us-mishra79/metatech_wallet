@@ -320,9 +320,9 @@ export default {
                 if (value <= amountDelegated && value >= 1) {
                     ok = true;
                 } else if (value > 0 && value < 1) {
-                    this.amountErrMsg = `You can't lock amount less than 1 TPC`;
+                    this.amountErrMsg = `You can't lock amount less than 1 MTC`;
                 } else if (value >= 1) {
-                    this.amountErrMsg = `You can lock max ${amountDelegated} TPC`;
+                    this.amountErrMsg = `You can lock max ${amountDelegated} MTC`;
                 }
             }
 

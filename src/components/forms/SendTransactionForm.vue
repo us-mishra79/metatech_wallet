@@ -2,7 +2,7 @@
     <div class="send-transaction-form">
         <h2 :id="labelId" class="with-back-btn align-center" data-focus>
             <template v-if="token.address"> Send {{ tokenSymbol }} </template>
-            <template v-else>Send Photon TPC</template>
+            <template v-else>Send Photon MTC</template>
             <f-back-button ref="backButton" :route-name="getBackButtonRoute('account-send-transaction-form')" />
         </h2>
 
@@ -75,7 +75,7 @@
                         <div class="align-center form-buttons">
                             <template v-if="d_sendDirection !== 'PhotonToPhoton'">
                                 <f-message type="warning" class="align-center">
-                                    All bridge transactions incur a fee of {{ minTPCToTransfer }} TPC, deducted from the
+                                    All bridge transactions incur a fee of {{ minTPCToTransfer }} MTC, deducted from the
                                     transfer amount.
                                 </f-message>
                                 <f-message
@@ -83,7 +83,7 @@
                                     type="info"
                                     class="big"
                                 >
-                                    You will receive <b>{{ amount - minTPCToTransfer }} TPC</b>
+                                    You will receive <b>{{ amount - minTPCToTransfer }} MTC</b>
                                 </f-message>
                                 <br />
                             </template>
@@ -169,7 +169,7 @@ export default {
             amountErrMsg: 'Invalid amount',
             gasPrice: '',
             amount: '',
-            sendToErrorMsg: 'Enter a valid Photon TPC address or domain name',
+            sendToErrorMsg: 'Enter a valid Photon MTC address or domain name',
             /** Balance of BNB or ETH account. */
             ETHOrBNBAccountBalance: '',
             minTPCToTransfer: appConfig.bnbridgeApi.minTPCToTransfer,
@@ -232,7 +232,7 @@ export default {
         tokenSymbol() {
             const { token } = this;
 
-            return token.address ? this.$defi.getTokenSymbol(token) : 'TPC';
+            return token.address ? this.$defi.getTokenSymbol(token) : 'MTC';
         },
 
         /**
@@ -298,9 +298,9 @@ export default {
             this.ETHOrBNBAccountBalance = '';
 
             if (d_sendDirection === 'PhotonToPhoton') {
-                value = (await this.resolveAddress(value, 'TPC', 'PHOTON')) || value;
+                value = (await this.resolveAddress(value, 'MTC', 'PHOTON')) || value;
                 validAddress = this.$fWallet.isValidAddress(value);
-                this.sendToErrorMsg = 'Enter a valid Photon TPC address or domain name';
+                this.sendToErrorMsg = 'Enter a valid Photon MTC address or domain name';
             } else if (d_sendDirection === 'PhotonToBinance') {
                 validAddress = this.$bnb.isBNBAddress(value);
                 this.sendToErrorMsg = 'Enter a valid BNB address';
@@ -313,7 +313,7 @@ export default {
                     } else {
                         try {
                             const data = await this.$bnb.getBNBBalances(value);
-                            this.ETHOrBNBAccountBalance = `Current TechPay Balance: ${data.balance} TPC`;
+                            this.ETHOrBNBAccountBalance = `Current TechPay Balance: ${data.balance} MTC`;
                         } catch (_error) {
                             validAddress = false;
 
@@ -332,7 +332,7 @@ export default {
                 if (validAddress) {
                     try {
                         const balance = await this.$bnb.getETHBalance(value);
-                        this.ETHOrBNBAccountBalance = `Current TechPay Balance: ${balance} TPC`;
+                        this.ETHOrBNBAccountBalance = `Current TechPay Balance: ${balance} MTC`;
                     } catch (_error) {
                         validAddress = false;
 
@@ -453,7 +453,7 @@ export default {
                 this.windowTitle =
                     this.token && this.token.symbol
                         ? `Send ${this.$defi.getTokenSymbol(this.token)}`
-                        : 'Send Photon TPC';
+                        : 'Send Photon MTC';
 
                 this.$refs.confirmationWindow.changeComponent('transaction-confirmation', {
                     txData: { ...data },

@@ -15,7 +15,7 @@
                     {{ currentAccount.address }}
                     <span class="f-row-label">
                         <template v-if="currentAccount.name"><br /></template>
-                        ( {{ toTPC(currentAccount.balance) }} TPC
+                        ( {{ toTPC(currentAccount.balance) }} MTC
                         <template v-if="currentAccount.name">, {{ currentAccount.name }}</template> )
                     </span>
                 </div>
@@ -23,7 +23,7 @@
         </li>
         <li>
             <div class="row no-collapse">
-                <div class="col-3 f-row-label">Amount (TPC)</div>
+                <div class="col-3 f-row-label">Amount (MTC)</div>
                 <div class="col">
                     {{ amount }}
                 </div>
