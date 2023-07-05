@@ -6,8 +6,7 @@ $btns-border-radius: 12px;
     .intro {
         color: rgba(255, 255, 255, 0.75);
         //padding: 32px 0 88px;
-        padding: 0 0 60px;
-        text-align: center;
+        // padding: 0 0 60px;
 
         h1 {
             font-size: 48px;
@@ -54,24 +53,47 @@ $btns-border-radius: 12px;
         font-weight: bold;
         height: 60px;
         font-size: 18px;
-        border-radius: $btns-border-radius;
+        border-radius: 5px;
+        background-color: transparent;
     }
 
     @include buttons('.restore-account-btn') {
         font-weight: bold;
         height: 60px;
         font-size: 18px;
-        border-radius: $btns-border-radius;
+        border-radius: 5px;
+        background-color: transparent;
     }
 
     @include buttons('.ledger-accounts-btn') {
         font-weight: bold;
         height: 60px;
+        width: 260px;
         font-size: 18px;
-        border-radius: $btns-border-radius;
+        border-radius: 30px;
+        margin-top: 20px
     }
 }
-
+.shape-bg {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: '';
+        clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 70%, 81% 92%, 42% 64%, 25% 73%, 0 49%);
+        background: #518eff1f;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        @media (max-width: 767.98px) {
+            background: #518eff1f;
+            clip-path: none;
+        }
+    }
+}
 @include media-max($bp-small) {
     .welcome-view {
         .intro {

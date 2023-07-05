@@ -3,9 +3,9 @@
         <Header />
 
         <main class="main">
-            <div class="narrow-container">
+            <!-- <div class="narrow-container"> -->
                 <router-view></router-view>
-            </div>
+            <!-- </div> -->
         </main>
 
         <Footer />

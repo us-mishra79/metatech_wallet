@@ -186,11 +186,16 @@ button.no-style {
 }
 
 @include buttons('.same-size') {
-    padding: 0;
+    padding: 0 !important;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     min-width: 2.25rem;
+    svg{
+        margin-right: 0 !important;
+        width: 20px !important;
+        height: 20px !important;
+    }
 }
 
 @include buttons('.mini.same-size') {

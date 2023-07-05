@@ -14,8 +14,7 @@
             <div class="body">
                 <div class="logo">
                     <router-link to="/" class="logo-link">
-                        <icon data="@/assets/svg/techpay.svg" width="40" height="50" />
-                        <span class="wallet-label">Wallet</span>
+                        <img src="logo.png" width="70" />
                     </router-link>
                 </div>
                 <f-simple-navigation :items="navigation" aria-label="main navigation" />

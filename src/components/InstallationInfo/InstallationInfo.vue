@@ -2,7 +2,7 @@
     <section :aria-labelledby="labelId" class="installation-info">
         <h2 :id="labelId" class="not-visible">Wallet instalation</h2>
 
-        <p class="align-center">
+        <p class="">
             The Meta Tech Wallet has been created as a Progressive Web App (PWA) which is easy to launch on all platforms:
         </p>
 

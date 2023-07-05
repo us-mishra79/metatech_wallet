@@ -13,12 +13,20 @@
         }
 
         @include links() {
-            color: inherit;
+            color: #000;
             transition: color $transition-length ease;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
         }
 
         a:not(.btn):hover {
-            color: var(--f-social-media-link-hover-color);
+            background-color: var(--f-social-media-link-hover-color);
+            color: #fff;
         }
     }
 

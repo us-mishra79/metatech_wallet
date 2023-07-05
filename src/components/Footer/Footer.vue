@@ -1,11 +1,11 @@
 <template>
     <footer class="f-footer">
-        <div class="narrow-container">
+        <div class="narrow-container fluid">
             <div class="row align-items-center">
-                <div class="col align-center-sm">
+                <div class="col-12 align-center">
                     <social-media-links></social-media-links>
                 </div>
-                <div class="col align-center-sm align-end">
+                <div class="col-12 align-center">
                     <a href="https://techpay.io/" class="f-footer-text" target="_blank" rel="noopener">©2020 Meta Tech</a>
                 </div>
             </div>

@@ -1,27 +1,21 @@
 <template>
     <div class="welcome-view">
-        <div class="intro">
-            <h1>Welcome to <strong>Meta Tech Wallet</strong></h1>
-            <h2><strong>Send</strong>, <strong>receive</strong> and <strong>stake</strong> your Photon MTC</h2>
-        </div>
+        <div class="shape-bg">
+            <div class="narrow-container">
+                <div class="intro">
+                    <h1>Welcome to <strong>Meta Tech Wallet</strong></h1>
+                    <h2><strong>Send</strong>, <strong>receive</strong> and <strong>stake</strong> your Photon MTC</h2>
+                </div>
 
-        <div class="view-account-main">
-            <section :aria-labelledby="createId" class="main-buttons v2 collapse-md">
-                <h2 :id="createId" class="not-visible">Connect, create or restore wallet</h2>
+                <div class="view-account-main">
+                    <section :aria-labelledby="createId" class="main-buttons v2 collapse-md">
+                        <h2 :id="createId" class="not-visible">Connect, create or restore wallet</h2>
 
-                <button class="btn ledger-accounts-btn large w100p" @click="onConnectWalletClick">
-                    <icon data="@/assets/svg/connect.svg" width="32" height="32" aria-hidden="true" />
-                    Connect Wallet
-                </button>
-                <button class="btn create-account-btn large w100p" @click="onCreateWalletClick">
-                    <icon data="@/assets/svg/wallet.svg" width="32" height="32" :fill="false" aria-hidden="true" />
-                    Create Wallet
-                </button>
-                <button class="btn restore-account-btn large w100p" @click="onRestoreWalletClick">
-                    <icon data="@/assets/svg/key.svg" width="32" height="32" aria-hidden="true" />
-                    Restore Wallet
-                </button>
-                <!--                <router-link :to="{ name: 'create-account' }" class="btn create-account-btn large w100p">
+                        <button class="btn ledger-accounts-btn" @click="onConnectWalletClick">
+                            <icon data="@/assets/svg/connect.svg" width="32" height="32" aria-hidden="true" />
+                            Connect Wallet
+                        </button>
+                        <!--                <router-link :to="{ name: 'create-account' }" class="btn create-account-btn large w100p">
                     <icon data="@/assets/svg/wallet.svg" width="32" height="32" :fill="false" aria-hidden="true" />
                     Create Wallet
                 </router-link>
@@ -29,12 +23,17 @@
                     <icon data="@/assets/svg/key.svg" width="32" height="32" aria-hidden="true" />
                     Restore Wallet
                 </router-link>-->
-                <!--                <router-link :to="{ name: 'ledger-accounts' }" class="btn ledger-accounts-btn large w100p">
+                        <!--                <router-link :to="{ name: 'ledger-accounts' }" class="btn ledger-accounts-btn large w100p">
                     Ledger
                 </router-link>-->
-            </section>
+                    </section>
 
-            <installation-info />
+                    <installation-info />
+                </div>
+
+            </div>
+        </div>
+        <div class="narrow-container">
             <section :aria-labelledby="walletsId">
                 <h2 style="margin:0" :id="walletsId">Wallet list</h2>
                 <account-list />

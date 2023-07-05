@@ -66,8 +66,8 @@
             background-color: var(--f-doc-background-color);
 
             &.same-size {
-                min-width: 48px;
-                min-height: 48px;
+                min-width: 48px !important;
+                min-height: 48px !important;
             }
         }
     }
@@ -234,8 +234,8 @@ html[dir="rtl"], body[dir="rtl"] {
 
             .btn {
                 &.same-size {
-                    min-width: 40px;
-                    min-height: 40px;
+                    min-width: 40px !important;
+                    min-height: 40px !important;
                 }
             }
         }
