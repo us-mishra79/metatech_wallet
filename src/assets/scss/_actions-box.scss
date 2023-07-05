@@ -1,4 +1,4 @@
-@import "vars";
+@import 'vars';
 
 .actions-box {
     --f-actions-box-color: var(--f-primary-color);
@@ -18,7 +18,20 @@
                 min-width: 80px;
                 color: var(--f-actions-box-color);
                 cursor: pointer;
-
+                .create-account-btn {
+                    background-color: $create-account-color !important;
+                    border-color: $create-account-color !important;
+                    &:not([disabled]):not(.disabled):not(.no-hover):hover{
+                        background: darken($create-account-color, 10%) !important;
+                    }
+                }
+                .restore-account-btn{
+                    background-color: $restore-account-color !important;
+                    border-color: $restore-account-color !important;
+                    &:not([disabled]):not(.disabled):not(.no-hover):hover{
+                        background: darken($restore-account-color, 10%) !important;
+                    }
+                }
                 &:hover {
                     text-decoration: none;
                 }

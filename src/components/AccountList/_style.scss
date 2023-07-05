@@ -1,4 +1,4 @@
-@import "../../assets/scss/vars";
+@import '../../assets/scss/vars';
 //@import "../core/FCard/variables";
 
 .account-list {
@@ -52,33 +52,33 @@
     }
 
     //&.edit-mode {
-        .address-col {
-            //position: relative;
-            display: block;
+    .address-col {
+        //position: relative;
+        display: block;
 
-            padding-inline-end: 32px;
+        padding-inline-end: 32px;
 
-            button.btn-edit, .f-copy-button {
-                position: absolute;
-                right: 20px;
-                top: 20px;
-            }
-
-            .f-copy-button {
-                top: 15px;
-            }
+        button.btn-edit,
+        .f-copy-button {
+            position: absolute;
+            right: 20px;
+            top: 20px;
         }
 
+        .f-copy-button {
+            top: 15px;
+        }
+    }
 
-        .f-card {
-            &:not(.off) {
-                .label {
-                    padding-inline-end: 32px;
-                    color: #fff;
-                    font-weight: 900;
-                }
+    .f-card {
+        &:not(.off) {
+            .label {
+                padding-inline-end: 32px;
+                color: #fff;
+                font-weight: 900;
             }
         }
+    }
     //}
 
     .account-edit-actions {
@@ -91,10 +91,12 @@
     }
 }
 
-html[dir="rtl"], body[dir="rtl"] {
+html[dir='rtl'],
+body[dir='rtl'] {
     .account-list {
         .address-col {
-            button.btn-edit, .f-copy-button {
+            button.btn-edit,
+            .f-copy-button {
                 right: unset;
                 left: 20px;
             }
@@ -111,35 +113,38 @@ html[dir="rtl"], body[dir="rtl"] {
         }
 
         //&.edit-mode {
-            .address-col {
-                button.btn-edit {
-                    top: initial;
-                    bottom: 76px;
-                }
-
-                .f-copy-button {
-                    top: initial;
-                    bottom: 50px;
-                }
+        .address-col {
+            button.btn-edit {
+                top: initial;
+                bottom: 76px;
             }
+
+            // .f-copy-button {
+            //     top: initial;
+            //     bottom: 50px;
+            // }
+        }
         //}
     }
 }
-.accounts-container{
+.accounts-container {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    .wallets-info{
+    @media (max-width: 767.98px) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .wallets-info {
         display: flex;
         justify-content: space-between;
-        margin-top:20px;
+        margin-top: 20px;
     }
-    .wallet-info{
+    .wallet-info {
         display: flex;
         flex-direction: column;
-        padding:20px;
+        padding: 20px;
         width: 48%;
-        border:1px solid rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 4px;
     }
 }

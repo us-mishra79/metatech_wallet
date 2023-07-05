@@ -33,15 +33,13 @@
 
             </div>
         </div>
-        <div class="narrow-container">
+        <div class="narrow-container wallet-cont">
             <section :aria-labelledby="walletsId">
                 <h2 style="margin:0" :id="walletsId">Wallet list</h2>
                 <account-list />
             </section>
 
             <connect-wallet-window ref="connectWalletWindow" />
-            <create-account-window ref="createAccountWindow" />
-            <restore-account-window ref="restoreAccountWindow" />
         </div>
     </div>
 </template>
@@ -51,16 +49,12 @@ import AccountList from '../../components/AccountList/AccountList.vue';
 import InstallationInfo from '../../components/InstallationInfo/InstallationInfo.vue';
 import ConnectWalletWindow from '@/components/windows/ConnectWalletWindow/ConnectWalletWindow.vue';
 import { getUniqueId } from '@/utils';
-import CreateAccountWindow from '@/components/windows/CreateAccountWindow/CreateAccountWindow.vue';
-import RestoreAccountWindow from '@/components/windows/RestoreAccountWindow/RestoreAccountWindow.vue';
 
 // import {WEIToTPC} from "../utils/transactions.js";
 export default {
     name: 'Welcome',
 
     components: {
-        RestoreAccountWindow,
-        CreateAccountWindow,
         ConnectWalletWindow,
         InstallationInfo,
         AccountList,
@@ -76,14 +70,6 @@ export default {
     methods: {
         onConnectWalletClick() {
             this.$refs.connectWalletWindow.show();
-        },
-
-        onCreateWalletClick() {
-            this.$refs.createAccountWindow.show();
-        },
-
-        onRestoreWalletClick() {
-            this.$refs.restoreAccountWindow.show();
         },
     },
 };
