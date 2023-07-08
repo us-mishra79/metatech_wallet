@@ -7,7 +7,7 @@
 @import 'core/reset';
 
 @import 'core/all';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Niramit:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 /*
 @import "core/main";
@@ -69,12 +69,12 @@ a:not(.btn):hover {
 }
 
 @include headings() {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Niramit', sans-serif;
     letter-spacing: normal;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Niramit', sans-serif;
 }
 
 details {
@@ -447,13 +447,24 @@ input.no-style {
     }
 }
 .account-container {
+    &:hover {
+        .f-card {
+            background: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+        }
+    }
     .f-card {
         padding: 40px !important;
-        &:hover,
-        &:active,
-        &:focus {
-            background-color: #0f0f0f !important;
-        }
+        background: rgba(255, 255, 255, 0.05) !important;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3) !important;
+        backdrop-filter: blur(5px) !important;
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        // &:hover,
+        // &:active,
+        // &:focus {
+        //     background-color: #0f0f0f !important;
+        // }
         .f-copy-button {
             svg {
                 fill: #fff;
@@ -468,7 +479,7 @@ input.no-style {
 }
 
 .close-btn {
-    svg{
+    svg {
         fill: #fff;
     }
     &:hover,

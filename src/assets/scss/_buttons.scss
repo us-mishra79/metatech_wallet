@@ -3,46 +3,46 @@
 }
 
 @include buttons('.create-account-btn') {
-    // background-color: $create-account-color;
-    padding: 8px 16px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    margin-right: 10px;
-    svg{
-        width: 26px !important;
-        height: 26px !important;
-        margin-right: 12px;
-    }
+    background-color: $create-account-color;
+    // padding: 8px 16px;
+    // background: transparent;
+    // border: 1px solid #fff;
+    // border-radius: 5px;
+    // margin-right: 10px;
+    // svg{
+    //     width: 26px !important;
+    //     height: 26px !important;
+    //     margin-right: 12px;
+    // }
 }
 
 @include buttons('.create-account-btn:not([disabled]):not(.disabled):not(.no-hover):hover') {
-    background: $create-account-color;
+    background: darken($create-account-color, 10%);
 }
 
 @include buttons('.create-account-btn:not([disabled]):not(.disabled):not(.no-hover):focus') {
-    background: $create-account-color;
+    background: darken($create-account-color, 10%);
 }
 
 @include buttons('.restore-account-btn') {
-    // background-color: $restore-account-color;
-    background: transparent;
-    padding: 8px 16px;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    svg{
-        width: 26px !important;
-        height: 26px !important;
-        margin-right: 12px;
-    }
+    background-color: $restore-account-color;
+    // background: transparent;
+    // padding: 8px 16px;
+    // border: 1px solid #fff;
+    // border-radius: 5px;
+    // svg{
+    //     width: 26px !important;
+    //     height: 26px !important;
+    //     margin-right: 12px;
+    // }
 }
 
 @include buttons('.restore-account-btn:not([disabled]):not(.disabled):not(.no-hover):hover') {
-    background: $restore-account-color !important;
+    background: darken($restore-account-color, 10%);
 }
 
 @include buttons('.restore-account-btn:not([disabled]):not(.disabled):not(.no-hover):focus') {
-    background: $restore-account-color !important;
+    background: darken($restore-account-color, 10%);
 }
 
 @include buttons('.ledger-accounts-btn') {
